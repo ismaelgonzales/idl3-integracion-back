@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "singularName": "producto",
+    "pluralName": "productos",
+    "displayName": "Producto"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "precio": {
+      "type": "decimal",
+      "required": true
+    },
+    "cantidad": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "categoria": {
+      "type": "enumeration",
+      "enum": [
+        "electronica",
+        "ropa",
+        "alimentos",
+        "hogar",
+        "otros"
+      ]
+    },
+    "imagen": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
